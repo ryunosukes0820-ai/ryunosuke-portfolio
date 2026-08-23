@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryunosuke Sato | Web制作ポートフォリオ</title>
+<meta name="description" content="Ryunosuke SatoのWeb制作ポートフォリオサイトです。企画・情報設計から実装・公開まで対応します。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">Ryunosuke Sato</a>
+
+    <nav class="nav" aria-label="メインナビゲーション">
+      <ul>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#process">Process</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary btn-sm header-cta">Contact</a>
+
+    <button type="button" class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-mobile">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-label="モバイルナビゲーション" hidden>
+    <ul>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">目的から考える、Web制作。</h1>
+        <p class="hero-text">企画・情報設計から実装・公開まで。<br>伝えたい相手に合わせてデザインします。</p>
+        <ul class="hero-tags">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Responsive</li>
+        </ul>
+        <div class="hero-actions">
+          <a href="#works" class="btn btn-primary">Worksを見る</a>
+          <a href="#contact" class="btn btn-secondary">相談する</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hv-blob"></div>
+        <div class="hv-arc hv-arc-1"></div>
+        <div class="hv-arc hv-arc-2"></div>
+        <div class="hv-arc hv-arc-3"></div>
+        <div class="hv-line hv-line-1"></div>
+        <div class="hv-line hv-line-2"></div>
+        <span class="hv-dot hv-dot-1"></span>
+        <span class="hv-dot hv-dot-2"></span>
+        <span class="hv-dot hv-dot-3"></span>
+        <span class="hv-dot hv-dot-4"></span>
+        <span class="hv-dot hv-dot-5"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section id="works" class="works">
+    <div class="container">
+      <h2 class="section-title reveal">Works</h2>
+      <p class="section-lead">ここでご紹介する2つの作品は、実務案件ではなく、Web制作のスキルを示すために自主制作したサンプルサイトです。架空の店舗・企業を想定し、企画からワイヤーフレーム設計、実装、公開までを一人で行いました。</p>
+    </div>
+
+    <div class="work-row work-row-cafe">
+    <div class="container">
+      <article class="work-item reveal" id="work-cafe">
+        <div class="work-media">
+          <div class="work-media-frame">
+            <div class="work-media-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <img src="images/works-cafe-pc.jpg" alt="珈琲舎 灯のPC画面のスクリーンショット" width="1280" height="800" loading="lazy">
+          </div>
+          <div class="work-media-sp">
+            <img src="images/works-cafe-sp.jpg" alt="珈琲舎 灯のスマートフォン画面のスクリーンショット" width="750" height="1624" loading="lazy">
+          </div>
+        </div>
+        <div class="work-body">
+          <span class="badge">BtoC向け</span>
+          <p class="work-type">店舗・カフェサイト想定</p>
+          <h3 class="work-title">珈琲舎 灯</h3>
+          <p class="work-desc">大阪にある架空のコーヒースタンドを想定し、写真と温かみのあるデザインで「行ってみたい」と感じてもらえる雰囲気づくりを目指して制作したBtoC向けサンプルサイトです。</p>
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git / GitHub</li>
+          </ul>
+          <ul class="work-points">
+            <li>ベージュ・ブラウン系の暖色でトーンを統一</li>
+            <li>明朝体とゴシック体を使い分け、雰囲気と可読性を両立</li>
+            <li>PC / スマホで写真が自然に見えるレスポンシブ設計</li>
+          </ul>
+          <div class="work-actions">
+            <a href="https://ryunosukes0820-ai.github.io/cafe-sample/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+            <a href="https://github.com/ryunosukes0820-ai/cafe-sample" class="btn btn-text" target="_blank" rel="noopener noreferrer">GitHubを見る</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    </div>
+
+    <div class="work-row work-row-nexora">
+    <div class="container">
+      <article class="work-item reveal" id="work-nexora">
+        <div class="work-body">
+          <span class="badge">BtoB向け</span>
+          <p class="work-type">AI・DX支援企業サイト想定</p>
+          <h3 class="work-title">NEXORA</h3>
+          <p class="work-desc">AI・DX支援を行う架空企業を想定し、6ページ構成で情報を整理したBtoB向けコーポレートサイトです。信頼感と情報の分かりやすさを意識して制作しました。</p>
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git / GitHub</li>
+          </ul>
+          <ul class="work-points">
+            <li>ネイビー×ブルーでBtoB企業らしい信頼感を表現</li>
+            <li>写真を使わずCSSによる抽象ビジュアルで世界観を構築</li>
+            <li>6ページでデザイン・情報設計・導線の一貫性を維持</li>
+          </ul>
+          <div class="work-actions">
+            <a href="https://ryunosukes0820-ai.github.io/nexora-sample/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+            <a href="https://github.com/ryunosukes0820-ai/nexora-sample" class="btn btn-text" target="_blank" rel="noopener noreferrer">GitHubを見る</a>
+          </div>
+        </div>
+        <div class="work-media">
+          <div class="work-media-frame">
+            <div class="work-media-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <img src="images/works-nexora-pc.png" alt="NEXORAのPC画面のスクリーンショット" width="1280" height="800" loading="lazy">
+          </div>
+          <div class="work-media-sp">
+            <img src="images/works-nexora-sp.png" alt="NEXORAのスマートフォン画面のスクリーンショット" width="750" height="1624" loading="lazy">
+          </div>
+        </div>
+      </article>
+    </div>
+    </div>
+
+    <div class="container">
+      <div class="works-cta">
+        <h3>こんなサイトを作ってほしい方へ</h3>
+        <p>BtoC・BtoBなど、目的や伝えたい相手に合わせたWebサイト制作を大切にしています。気になる点があれば、お気軽にご相談ください。</p>
+        <a href="#contact" class="btn btn-primary">相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about-inner">
+      <div class="about-visual" aria-hidden="true">
+        <div class="av-circle av-circle-1"></div>
+        <div class="av-circle av-circle-2"></div>
+        <div class="av-circle av-circle-3"></div>
+        <div class="av-line"></div>
+        <span class="av-dot av-dot-1"></span>
+        <span class="av-dot av-dot-2"></span>
+        <span class="av-dot av-dot-3"></span>
+      </div>
+      <div class="about-content">
+        <h2 class="section-title reveal">About</h2>
+        <p>はじめまして。現在、Web制作を学びながら、実際に手を動かしてサイトを制作し、公開するところまでを一貫して行っています。</p>
+        <p>知識を蓄えるだけでなく、架空の店舗や企業を想定してサイトを企画し、情報設計・デザイン・コーディング・公開までの一連の流れを、自分の手で経験することを大切にしています。</p>
+        <p>制作の際は、見た目の良さだけでなく「誰に、何を伝えるためのサイトか」を最初に整理するようにしています。BtoC向けとBtoB向けでは伝え方もデザインの方向性も変わると考えており、目的に合わせて配色やレイアウトを作り分けることを意識しています。</p>
+        <p>Gitでの変更管理やGitHub Pagesでの公開にも対応しているため、制作から公開までを一人で完結させることができます。</p>
+        <p>今後は自主制作で培った経験を活かし、目的や課題に合わせたWeb制作に取り組んでいきたいと考えています。</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul class="value-list">
+        <li class="value-item reveal">
+          <span class="value-num">01</span>
+          <span class="value-mark" aria-hidden="true"></span>
+          <h3>情報設計から考える</h3>
+          <p>見た目のデザインだけでなく、「何をどの順番で伝えるか」から考えて構成しています。</p>
+        </li>
+        <li class="value-item reveal">
+          <span class="value-num">02</span>
+          <span class="value-mark" aria-hidden="true"></span>
+          <h3>目的に合わせて作り分ける</h3>
+          <p>BtoC・BtoBなど、想定する相手や目的によってデザインのトーンを変えています。</p>
+        </li>
+        <li class="value-item reveal">
+          <span class="value-num">03</span>
+          <span class="value-mark" aria-hidden="true"></span>
+          <h3>公開まで責任を持つ</h3>
+          <p>Git / GitHubを使い、制作から公開までを自分の手で最後まで行っています。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills / Services -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Skills / Services</h2>
+
+      <div class="skills-grid">
+        <div class="skills-block skills-tech reveal">
+          <h3>使える技術</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-mark" aria-hidden="true"></span>
+              <strong>HTML</strong>
+              <span>意味のあるマークアップを意識し、構造から整理して組み立てています。</span>
+            </li>
+            <li>
+              <span class="skill-mark" aria-hidden="true"></span>
+              <strong>CSS</strong>
+              <span>Flexbox・Gridやメディアクエリを使い、崩れにくいレイアウトを組んでいます。</span>
+            </li>
+            <li>
+              <span class="skill-mark" aria-hidden="true"></span>
+              <strong>JavaScript</strong>
+              <span>フレームワークを使わないVanilla JavaScriptで、必要な動きを実装しています。</span>
+            </li>
+            <li>
+              <span class="skill-mark" aria-hidden="true"></span>
+              <strong>Responsive</strong>
+              <span>PC・タブレット・スマートフォンそれぞれで見やすい表示になるよう調整しています。</span>
+            </li>
+            <li>
+              <span class="skill-mark" aria-hidden="true"></span>
+              <strong>Git / GitHub</strong>
+              <span>変更履歴を管理しながら制作を進め、GitHub Pagesでの公開まで対応しています。</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skills-divider" aria-hidden="true"></div>
+
+        <div class="skills-block skills-services">
+          <h3>対応できること</h3>
+          <ul class="service-list">
+            <li class="reveal">
+              <span class="service-mark" aria-hidden="true"></span>
+              <div>
+                <h4>目的に合わせたデザイン設計</h4>
+                <p>BtoC・BtoBなど、サイトの目的や伝えたい相手に合わせてデザインの方向性を考えます。</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="service-mark" aria-hidden="true"></span>
+              <div>
+                <h4>PC / タブレット / スマホ対応のコーディング</h4>
+                <p>どのデバイスで見ても崩れないよう実装します。</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="service-mark" aria-hidden="true"></span>
+              <div>
+                <h4>Gitを使った制作〜公開</h4>
+                <p>変更管理をしながら制作を進め、公開まで対応します。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="process">
+    <div class="container">
+      <h2 class="section-title reveal">Process</h2>
+      <p class="section-lead">ご依頼いただいた場合の想定フローです。</p>
+
+      <ol class="process-list">
+        <li class="process-step reveal">
+          <span class="process-num">01</span>
+          <span class="process-dot" aria-hidden="true"></span>
+          <h3>ヒアリング</h3>
+          <p>サイトの目的や伝えたいこと、イメージをお伺いします。</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-num">02</span>
+          <span class="process-dot" aria-hidden="true"></span>
+          <h3>構成・方向性整理</h3>
+          <p>お伺いした内容をもとに、情報設計とデザインの方向性を整理します。</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-num">03</span>
+          <span class="process-dot" aria-hidden="true"></span>
+          <h3>制作</h3>
+          <p>デザインからコーディングまで実装します。</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-num">04</span>
+          <span class="process-dot" aria-hidden="true"></span>
+          <h3>確認・調整</h3>
+          <p>内容をご確認いただきながら、必要に応じて調整します。</p>
+        </li>
+        <li class="process-step reveal">
+          <span class="process-num">05</span>
+          <span class="process-dot" aria-hidden="true"></span>
+          <h3>公開</h3>
+          <p>Gitを使って公開まで対応します。</p>
+        </li>
+      </ol>
+
+      <div class="works-cta process-cta">
+        <h3>制作の流れについて、ご不明点があれば</h3>
+        <p>進め方やご依頼の内容について、気になることがあればお気軽にお問い合わせください。</p>
+        <a href="#contact" class="btn btn-primary">相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container contact-inner">
+      <div class="contact-intro">
+        <h2 class="section-title reveal">Contact</h2>
+        <p>Webサイトの制作に関するご相談やご質問など、お気軽にご連絡ください。</p>
+        <p class="demo-notice">※このフォームはポートフォリオ用の送信デモです。入力内容は実際には送信されません。</p>
+      </div>
+
+      <form class="contact-form reveal" action="#" method="post">
+        <div class="form-field">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="company">会社名（任意）</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-field">
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">送信する</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-logo">Ryunosuke Sato</p>
+      <p class="footer-tagline">企画から公開まで、一人で形にします。</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="フッターナビゲーション">
+      <ul>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#process">Process</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contact" class="footer-contact">Contact</a>
+  </div>
+  <div class="container">
+    <p class="footer-copyright">&copy; 2026 Ryunosuke Sato</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
