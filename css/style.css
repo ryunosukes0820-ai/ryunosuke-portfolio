@@ -1064,10 +1064,16 @@ main > section[id] {
 }
 
 /* ---------- Contact ---------- */
+.contact {
+  padding-block: 64px;
+}
+
 .contact-inner {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 40px;
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
 .contact-intro p {
@@ -1075,8 +1081,9 @@ main > section[id] {
 }
 
 .demo-notice {
-  margin-top: 16px;
-  padding: 12px 16px;
+  max-width: 380px;
+  margin-top: 14px;
+  padding: 10px 14px;
   border-left: 2px solid var(--color-border);
   background-color: var(--color-bg-section);
   color: var(--color-text-sub);
@@ -1087,8 +1094,9 @@ main > section[id] {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  max-width: 560px;
+  gap: 32px;
+  width: 100%;
+  max-width: 520px;
 }
 
 .form-field {
@@ -1111,12 +1119,13 @@ main > section[id] {
   font-size: 15px;
   color: var(--color-text);
   border-radius: 0;
+  width: 100%;
   transition: border-color var(--transition-base);
 }
 
 .form-field textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .form-field input:focus,
@@ -1132,19 +1141,43 @@ main > section[id] {
 }
 
 .contact-form button {
-  align-self: flex-start;
+  align-self: stretch;
+  min-width: 160px;
+  padding-inline: 40px;
   margin-top: 8px;
 }
 
+@media (min-width: 768px) {
+  .contact {
+    padding-block: 88px;
+  }
+}
+
 @media (min-width: 1024px) {
+  .contact {
+    padding-block: 104px;
+  }
+
   .contact-inner {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 64px;
+    align-items: flex-start;
+    gap: 80px;
   }
 
   .contact-intro {
-    flex: 0 0 320px;
+    flex: 0 0 380px;
+  }
+
+  .contact-form {
+    flex: 1 1 480px;
+  }
+
+  .form-field textarea {
+    min-height: 160px;
+  }
+
+  .contact-form button {
+    align-self: flex-start;
   }
 }
 
