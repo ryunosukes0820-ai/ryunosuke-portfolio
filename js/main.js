@@ -89,8 +89,8 @@ document.documentElement.classList.add('js');
   closeNav();
 })();
 
-// ---------- Contact demo form ----------
-(function initContactDemoForm() {
+// ---------- Contact form (Formspree) ----------
+(function initContactForm() {
   var form = document.querySelector('.contact-form');
   if (!form) return;
 
@@ -103,12 +103,50 @@ document.documentElement.classList.add('js');
     form.appendChild(status);
   }
 
+  var submitButton = form.querySelector('button[type="submit"]');
+  var defaultButtonLabel = submitButton ? submitButton.textContent : '';
+
+  function setStatus(message, state) {
+    status.textContent = message;
+    status.classList.remove('is-success', 'is-error');
+    if (state) {
+      status.classList.add(state);
+    }
+  }
+
+  function setSubmitting(isSubmitting) {
+    if (!submitButton) return;
+    submitButton.disabled = isSubmitting;
+    submitButton.textContent = isSubmitting ? '送信中...' : defaultButtonLabel;
+  }
+
   form.addEventListener('submit', function (event) {
     // the browser only dispatches 'submit' once native validation
     // (required / type=email / etc.) has already passed
     event.preventDefault();
-    status.textContent =
-      '送信デモが完了しました。このフォームはポートフォリオ用のため、入力内容は実際には送信されていません。';
+
+    setSubmitting(true);
+    setStatus('', null);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    })
+      .then(function (response) {
+        if (response.ok) {
+          setStatus('お問い合わせありがとうございます。送信が完了しました。', 'is-success');
+          form.reset();
+        } else {
+          setStatus('送信に失敗しました。時間をおいてもう一度お試しください。', 'is-error');
+        }
+      })
+      .catch(function () {
+        setStatus('送信に失敗しました。時間をおいてもう一度お試しください。', 'is-error');
+      })
+      .finally(function () {
+        setSubmitting(false);
+      });
   });
 })();
 

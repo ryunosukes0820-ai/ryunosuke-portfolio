@@ -1080,17 +1080,6 @@ main > section[id] {
   color: var(--color-text-sub);
 }
 
-.demo-notice {
-  max-width: 380px;
-  margin-top: 14px;
-  padding: 10px 14px;
-  border-left: 2px solid var(--color-border);
-  background-color: var(--color-bg-section);
-  color: var(--color-text-sub);
-  font-size: 13px;
-  line-height: 1.7;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -1274,13 +1263,13 @@ main > section[id] {
   transform: translateY(0);
 }
 
-/* ---------- Contact demo form status ---------- */
+/* ---------- Contact form status ---------- */
 .form-status {
   display: none;
   margin-top: 4px;
   padding: 14px 16px;
+  border-left: 2px solid var(--color-border);
   background-color: var(--color-bg-section);
-  border-radius: var(--radius-sm);
   color: var(--color-text);
   font-size: 14px;
   line-height: 1.7;
@@ -1288,6 +1277,20 @@ main > section[id] {
 
 .form-status:not(:empty) {
   display: block;
+}
+
+.form-status.is-success {
+  border-left-color: var(--color-accent);
+}
+
+.form-status.is-error {
+  border-left-color: var(--color-text-sub);
+}
+
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* ---------- Reduced Motion ---------- */
