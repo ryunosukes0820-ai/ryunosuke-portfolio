@@ -717,6 +717,83 @@ main > section[id] {
   }
 }
 
+/* ---------- Writing ---------- */
+.writing-grid {
+  display: grid;
+  gap: 40px;
+  margin-top: 8px;
+}
+
+.writing-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.writing-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 33, 28, 0.1);
+}
+
+.writing-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1536 / 1024;
+  object-fit: cover;
+}
+
+.writing-body {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.writing-title {
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.writing-desc {
+  color: var(--color-text-sub);
+  margin-bottom: 16px;
+}
+
+.writing-meta {
+  margin-bottom: 20px;
+}
+
+.writing-meta li {
+  font-size: 13px;
+  color: var(--color-text-sub);
+  margin-bottom: 8px;
+}
+
+.writing-meta li:last-child {
+  margin-bottom: 0;
+}
+
+.writing-meta strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.writing-actions {
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .writing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ---------- About ---------- */
 .about-inner {
   display: flex;
